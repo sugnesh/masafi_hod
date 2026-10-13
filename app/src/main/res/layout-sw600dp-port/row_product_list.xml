@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.engear.vansales.model.ProductCatelog" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_130sdp">
+
+            <ImageView
+                android:id="@+id/ivImage"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="centerCrop" />
+
+            <ImageView
+                android:id="@+id/btnCart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|top"
+                android:layout_margin="@dimen/_5sdp"
+                android:tint="@color/colorBlack"
+                app:srcCompat="@drawable/ic_baseline_add_shopping_cart"/>
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tvName"
+            fontPath="@string/bold_font"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:singleLine="true"
+            android:text="@{item.itemName}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:textColor="@color/colorBlack"
+            tools:text="Cola 2 Ltr" />
+
+        <TextView
+            android:id="@+id/tvDes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:singleLine="true"
+            android:text="@{item.description}"
+            android:paddingLeft="@dimen/_8sdp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/colorGrey"
+            tools:text="Cola 2 Ltr" />
+
+        <TextView
+            android:id="@+id/tvPrice"
+            fontPath="@string/bold_font"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:paddingLeft="@dimen/_8sdp"
+            android:singleLine="true"
+            android:text="@{item.price}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/colorBlack"
+            tools:text="320" />
+    </LinearLayout>
+
+</layout>

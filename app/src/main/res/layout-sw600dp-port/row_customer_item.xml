@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.engear.vansales.model.CustomerData.DataCustomer" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_12sdp"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="6dp"
+            app:cardElevation="2dp"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imgColor"
+                        android:layout_width="6dp"
+                        android:layout_height="fill_parent"
+                        android:background="@color/colorAccent" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imgCircle"
+                        android:layout_width="@dimen/_44sdp"
+                        android:layout_height="@dimen/_44sdp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_5sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="7"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvId"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@{item.customer_code}"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                                android:textColor="#363635"
+                                tools:text="248722" />
+
+                            <TextView
+                                android:id="@+id/tvName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_1sdp"
+                                android:text="@{item.userDetail.firstname + ` ` + item.userDetail.lastname}"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                                android:textColor="@color/darkBlack"
+                                tools:text="D Mart" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_1sdp"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="@dimen/_14sdp"
+                                    android:layout_height="@dimen/_14sdp"
+                                    app:srcCompat="@drawable/ic_phone" />
+
+                                <TextView
+                                    android:id="@+id/tvPhone"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="8dp"
+                                    android:text="@{item.customer_phone}"
+                                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                                    android:textColor="@color/darkBlack"
+                                    tools:text="+1 2654531245" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="3"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/btnMap"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:id="@+id/ivMap"
+                                    android:layout_width="@dimen/_26sdp"
+                                    android:layout_height="@dimen/_26sdp"
+                                    android:layout_marginLeft="@dimen/_6sdp"
+                                    android:paddingLeft="@dimen/_2sdp"
+                                    android:paddingRight="@dimen/_2sdp"
+                                    app:srcCompat="@drawable/ic_location" />
+
+                                <ImageView
+                                    android:id="@+id/img_isDeliveries"
+                                    android:layout_width="@dimen/_24sdp"
+                                    android:layout_marginLeft="@dimen/_6sdp"
+                                    android:layout_height="@dimen/_24sdp"
+                                    android:paddingLeft="@dimen/_2sdp"
+                                    android:paddingRight="@dimen/_2sdp"
+                                    android:visibility="visible"
+                                    app:srcCompat="@drawable/ic_delivery_truck" />
+
+                                <TextView
+                                    android:id="@+id/tvDevTime"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal"
+                                    android:textColor="@color/colorBlack"
+                                    android:visibility="gone"
+                                    android:text="10:00"/>
+                            </LinearLayout>
+
+                            <ImageView
+                                android:id="@+id/ivShopClose"
+                                android:layout_width="@dimen/_30sdp"
+                                android:layout_height="@dimen/_30sdp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginLeft="@dimen/_6sdp"
+                                android:paddingLeft="@dimen/_2sdp"
+                                android:paddingRight="@dimen/_2sdp"
+                                android:visibility="gone"
+                                app:srcCompat="@drawable/icon_shop_closed" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+
+                        <ImageView
+                            android:id="@+id/img_small_order"
+                            android:layout_width="@dimen/_21sdp"
+                            android:layout_height="@dimen/_21sdp"
+                            android:visibility="gone"
+                            app:civ_border_color="#16c6ff"
+                            app:civ_border_width="0.5dp"
+                            app:srcCompat="@drawable/ic_icon_order_ring" />
+
+                        <ImageView
+                            android:id="@+id/img_small_collection"
+                            android:layout_width="@dimen/_21sdp"
+                            android:layout_height="@dimen/_21sdp"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/ic_icon_collection_ring" />
+
+                        <ImageView
+                            android:id="@+id/img_small_sales"
+                            android:layout_width="@dimen/_21sdp"
+                            android:layout_height="@dimen/_21sdp"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:visibility="gone"
+                            app:civ_border_color="#16c6ff"
+                            app:civ_border_width="0.5dp"
+                            app:srcCompat="@drawable/ic_icon_sales_rign" />
+
+                        <ImageView
+                            android:id="@+id/img_small_delivey"
+                            android:layout_width="@dimen/_21sdp"
+                            android:layout_height="@dimen/_21sdp"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:visibility="gone"
+                            app:civ_border_color="#16c6ff"
+                            app:civ_border_width="0.5dp"
+                            app:srcCompat="@drawable/ic_icon_delivery_ring" />
+
+                        <ImageView
+                            android:id="@+id/img_small_return"
+                            android:layout_width="@dimen/_21sdp"
+                            android:layout_height="@dimen/_21sdp"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:visibility="gone"
+                            app:civ_border_color="#16c6ff"
+                            app:civ_border_width="0.5dp"
+                            app:srcCompat="@drawable/return_icon" />
+
+
+                        <ImageView
+                            android:id="@+id/img_small_merch"
+                            android:layout_width="@dimen/_21sdp"
+                            android:layout_height="@dimen/_21sdp"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:visibility="gone"
+                            app:civ_border_color="#16c6ff"
+                            app:civ_border_width="0.5dp"
+                            app:srcCompat="@drawable/ic_icon_delivery_ring" />
+
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</layout>

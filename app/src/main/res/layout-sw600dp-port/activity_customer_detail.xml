@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activity.CustomerDetailActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite_100"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#00000000">
+
+                <ImageView
+                    android:id="@+id/imageViewplaces"
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    android:background="@drawable/curve_bg" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txt_credit_days"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:text="0"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/colorWhite" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Credit Days"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                            android:textColor="@color/colorWhite_200" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="@dimen/_1sdp"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/colorWhite_200" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txt_credit_limit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:text="0"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/colorWhite_200" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Credit Limits"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                            android:textColor="@color/colorWhite_200" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="@dimen/_1sdp"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/colorWhite_200" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txt_available_bal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:text="0"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/colorWhite_200" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Available Balance"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                            android:textColor="@color/colorWhite_200" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </FrameLayout>
+            <!-- Tab portion-->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/_10sdp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvOperation"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/btnOperation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|end"
+                    android:layout_margin="@dimen/_16sdp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="14dp"
+                    app:srcCompat="@drawable/ic_add"
+                    app:tint="@color/colorWhite" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+
+        <com.github.clans.fab.FloatingActionMenu
+            android:id="@+id/fab_menu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingRight="@dimen/_12sdp"
+            android:paddingBottom="@dimen/_12sdp"
+            fab:backgroundTint="@color/tint_green"
+            fab:fab_colorNormal="@color/tint_green"
+            fab:fab_colorPressed="@color/color_10"
+            fab:fab_colorRipple="#99FFFFFF"
+            fab:fab_shadowColor="@color/colorBlack"
+            fab:fab_showShadow="true"
+            fab:menu_backgroundColor="#ccffffff"
+            fab:menu_fab_size="normal"
+            android:visibility="gone"
+            fab:menu_icon="@drawable/ic_operation"
+            fab:menu_labels_colorNormal="#333333"
+            fab:menu_labels_colorPressed="#444444"
+            fab:menu_labels_colorRipple="#66FFFFFF"
+            fab:menu_labels_ellipsize="end"
+            fab:menu_labels_maxLines="-1"
+            fab:menu_labels_position="left"
+            fab:menu_labels_showShadow="true"
+            fab:menu_labels_singleLine="true"
+            fab:menu_openDirection="up">
+
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fabSale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_fan_discount"
+                fab:fab_label="Sales"
+                android:tint="@color/colorButtonBg"
+                fab:fab_size="mini" />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fabOrder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_fan_order"
+                fab:fab_label="Order"
+                app:backgroundTint="@color/colorButtonBg"
+                fab:fab_size="mini" />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fabDelivery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_fan_discount"
+                android:visibility="visible"
+                fab:fab_label="Delivery"
+                fab:fab_size="mini" />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fabCollection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_fan_shop"
+                fab:fab_label="Collection"
+                fab:fab_size="mini" />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fabReturn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_fan_discount"
+                android:visibility="visible"
+                fab:fab_label="Return"
+                fab:fab_size="mini" />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fabExchange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_fan_discount"
+                android:visibility="visible"
+                fab:fab_label="Exchange"
+                fab:fab_size="mini" />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fabMerchandising"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_fan_discount"
+                android:visibility="visible"
+                fab:fab_label="Merchandising"
+                fab:fab_size="mini" />
+
+        </com.github.clans.fab.FloatingActionMenu>
+
+
+    </FrameLayout>
+</layout>

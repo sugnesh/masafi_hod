@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/colorWhite_100">
+
+        <LinearLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/curve_bg"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/_44sdp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvVisitedCustomerList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/_16sdp"
+                android:clipToPadding="false" />
+
+        </LinearLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_minus30sdp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/cvTop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_48sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_marginRight="@dimen/_48sdp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_sequence"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="@dimen/_110sdp"
+                    android:layout_height="@dimen/_32sdp"
+                    android:layout_marginRight="@dimen/_4sdp"
+                    android:backgroundTint="@color/colorWhite"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="Sequence"
+                    android:textAllCaps="false"
+                    android:textColor="@color/hint_gray"
+                    android:textSize="@dimen/_10sdp"
+                    app:cornerRadius="@dimen/_16sdp"
+                    app:fontPath="@string/bold_font"
+                    app:strokeColor="@color/colorWhite"
+                    app:strokeWidth="2dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_customer"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="@dimen/_110sdp"
+                    android:layout_height="@dimen/_32sdp"
+                    android:layout_marginLeft="@dimen/_4sdp"
+                    android:backgroundTint="@color/colorWhite"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="All Customer"
+                    android:textAllCaps="false"
+                    android:textColor="@color/hint_gray"
+                    android:textSize="@dimen/_10sdp"
+                    app:cornerRadius="@dimen/_16sdp"
+                    app:fontPath="@string/bold_font"
+                    app:strokeColor="@color/colorWhite"
+                    app:strokeWidth="2dp" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvSequenceList"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:layout_marginLeft="@dimen/_12sdp"
+                app:layout_goneMarginLeft="@dimen/_12sdp"
+                android:clipToPadding="false"
+                android:paddingBottom="@dimen/_40sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cvTop"
+                app:layout_constraintVertical_bias="0" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvAllCustomerList"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:layout_marginLeft="@dimen/_12sdp"
+                app:layout_goneMarginLeft="@dimen/_12sdp"
+                android:clipToPadding="false"
+                android:paddingBottom="@dimen/_40sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cvTop"
+                app:layout_constraintVertical_bias="0" />
+
+            <com.github.clans.fab.FloatingActionMenu
+                android:id="@+id/fab_menu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingRight="@dimen/_12sdp"
+                android:paddingBottom="@dimen/_12sdp"
+                fab:backgroundTint="@color/tint_green"
+                fab:fab_colorNormal="@color/tint_green"
+                fab:fab_colorPressed="@color/color_10"
+                fab:fab_colorRipple="#99FFFFFF"
+                fab:fab_shadowColor="@color/colorBlack"
+                fab:fab_showShadow="true"
+                fab:menu_backgroundColor="#ccffffff"
+                fab:menu_fab_size="normal"
+                android:visibility="visible"
+                fab:menu_icon="@drawable/ic_operation"
+                fab:menu_labels_colorNormal="#333333"
+                fab:menu_labels_colorPressed="#444444"
+                fab:menu_labels_colorRipple="#66FFFFFF"
+                fab:menu_labels_ellipsize="end"
+                fab:menu_labels_maxLines="-1"
+                fab:menu_labels_position="left"
+                fab:menu_labels_showShadow="true"
+                fab:menu_labels_singleLine="true"
+                fab:menu_openDirection="up">
+
+
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/btnAdd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/fab_add"
+                    fab:fab_label="New Customer"
+                    android:tint="@color/colorButtonBg"
+                    fab:fab_size="mini" />
+
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/btnCustomersData"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/baseline_people_24n"
+                    app:backgroundTint="@color/colorButtonBg"
+                    android:visibility="gone"
+                    fab:fab_label="Sync Customers"
+                    fab:fab_size="mini" />
+
+
+            </com.github.clans.fab.FloatingActionMenu>
+
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/btnRefresh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_16sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:srcCompat="@drawable/ic_baseline_refresh_24"
+                app:tint="@color/colorWhite" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+</layout>

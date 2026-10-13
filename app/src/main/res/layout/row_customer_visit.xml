@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.engear.vansales.model.VisitData.Data" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:orientation="horizontal"
+            android:padding="@dimen/_5sdp"
+            android:weightSum="10"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:id="@+id/tvCustomerName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="@{item.customer.customerinfo.customerCode + `\n` + item.customer.firstname + ` ` + item.customer.lastname}"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_10sdp"
+                app:fontPath="@string/regular_font"
+                tools:text="" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@{item.startTime}"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_10sdp"
+                app:fontPath="@string/regular_font"
+                tools:text="" />
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@{item.endTime}"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_10sdp"
+                app:fontPath="@string/regular_font"
+                tools:text="" />
+
+            <TextView
+                android:id="@+id/isSeq"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_10sdp"
+                app:fontPath="@string/regular_font"
+                tools:text="" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="@{item.shopStatus}"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_10sdp"
+                app:fontPath="@string/regular_font"
+                tools:text="" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@color/grayd8" />
+    </LinearLayout>
+
+
+</layout>

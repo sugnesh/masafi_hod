@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.engear.vansales.model.PickerLoadData.PickerDataDetail.LoadRequest" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="6dp"
+            app:cardElevation="2dp"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="2"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/imgCircle"
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_margin="@dimen/_8sdp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="8"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_5sdp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tvCode"
+                            fontPath="@string/bold_font"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="@{item.item.itemCode}"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                            android:textColor="@color/darkBlack"
+                            tools:text="MDS001" />
+
+
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:id="@+id/tvName"
+                        fontPath="@string/bold_font"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_1sdp"
+                        android:text="@{item.item.item_name}"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                        android:textColor="@color/colorPrimary"
+                        tools:text="Danette Chocolate 90 gm" />
+
+
+                    <LinearLayout
+                        android:id="@+id/lytAppview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginTop="@dimen/_1sdp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvreqstQty"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                            android:textColor="@color/darkBlack"
+                            tools:text="Request Qty  : 4" />
+
+
+                        <!--   <TextView
+                               android:id="@+id/tvapprvQty"
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:layout_weight="1"
+                               android:text="@{`Approve Qty : `+ item.displayUOMName + ` ` +item.uomQty}"
+                               android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                               android:textColor="@color/darkBlack"
+                               tools:text="Approve Qty : 4" />
+   -->
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/lay_superEdit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Picker Approve Qty: "
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                            android:textColor="@color/colorBlack" />
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/edtQty"
+                                android:layout_width="@dimen/_52sdp"
+                                android:layout_height="@dimen/_28sdp"
+                                android:imeOptions="actionDone"
+                                android:inputType="number"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                                android:textColor="@android:color/black" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="2"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:src="@drawable/ic_pensil_edit"
+                        android:id="@+id/imgEdit"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_margin="@dimen/_8sdp" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+</layout>
+
+

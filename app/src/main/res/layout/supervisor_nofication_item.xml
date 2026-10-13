@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.engear.vansales.model.NotificationData.NotificationView" />
+    </data>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardOne"
+        android:elevation="10dp"
+        app:cardCornerRadius="4dp"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:background="@android:color/white"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true">
+
+        <LinearLayout
+            android:id="@+id/LinearLayout_load_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@android:color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_salesmanCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                app:fontPath="@string/regular_font"
+                android:text="@{item.type}"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                android:textColor="@color/colorBlack"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/text_notificationMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                app:fontPath="@string/regular_font"
+                android:text="@{item.message}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@android:color/tertiary_text_light"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/text_notificationDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fontPath="@string/regular_font"
+                android:layout_marginTop="2dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@android:color/tertiary_text_light"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:weightSum="2"
+                >
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnApprove"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:padding="@dimen/_10sdp"
+                    android:backgroundTint="@color/grayd8"
+                    android:text="Approve"
+                    android:layout_marginStart="20dp"
+                    android:layout_weight="1"
+                    android:textColor="@android:color/black"
+                    android:layout_marginEnd="30dp"
+                    android:textAllCaps="false"
+                    app:cornerRadius="12sp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="30dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnCancel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:padding="@dimen/_10sdp"
+                    android:backgroundTint="@color/grayd8"
+                    android:layout_marginEnd="20dp"
+                    android:text="Cancel"
+                    android:layout_weight="1"
+                    android:textColor="@android:color/black"
+                    android:textAllCaps="false"
+                    app:cornerRadius="12sp"
+                    android:layout_marginRight="20dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

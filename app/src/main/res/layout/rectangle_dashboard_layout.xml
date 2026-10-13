@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardOne"
+    android:elevation="10dp"
+    app:cardCornerRadius="10dp"
+    android:layout_width="180dp"
+    android:layout_height="130dp"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentTop="true">
+
+    <RelativeLayout
+        android:paddingTop="7dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="7dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/text_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="15dp"
+            android:text="Sales"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/text_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_toEndOf="@+id/text_title"
+            android:text=" +2.5%"
+            android:textColor="@android:color/holo_green_dark"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_toEndOf="@+id/text_value"
+            android:id="@+id/image_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_arrow_upward_24"
+            tools:ignore="VectorDrawableCompat" />
+
+        <TextView
+            android:layout_below="@+id/text_title"
+            android:id="@+id/text_valueOne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:textSize="22sp"
+            android:text="$27632" />
+
+        <TextView
+            android:layout_below="@id/text_valueOne"
+            android:id="@+id/text_valueTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="Compared to" />
+
+        <TextView
+            android:layout_below="@+id/text_valueTwo"
+            android:id="@+id/text_valueThree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="($21340 last year)" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
+

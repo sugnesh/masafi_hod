@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="item"
+            type="String" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/lvType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{item}"
+            android:paddingLeft="@dimen/_10sdp"
+            android:paddingTop="@dimen/_16sdp"
+            android:paddingBottom="@dimen/_12sdp"
+            android:textSize="@dimen/_12sdp"/>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_weight="3.5"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_van_stock_analytics" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="6.5"
+            android:background="@drawable/ic_on_boarding_bg_2_vansales"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                fontPath="@string/quickBold_font"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Van stock analytics"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:textColor="@color/colorWhite" />
+
+            <TextView
+                fontPath="@string/poppins_font"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:text="Lorem ipsum is simply dummy"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_10sdp" />
+
+            <TextView
+                fontPath="@string/poppins_font"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="test of the printing text of"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_10sdp" />
+
+            <TextView
+                fontPath="@string/poppins_font"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="the printing"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_10sdp" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

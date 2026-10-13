@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4"
+            android:gravity="center"
+            android:paddingTop="@dimen/_10sdp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_field_force_insights" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="6"
+            android:background="@drawable/ic_on_boarding_bg_2_vansales"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                fontPath="@string/quickBold_font"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Field force insights"
+                android:textColor="@color/colorWhite"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+
+            <TextView
+                fontPath="@string/poppins_font"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:text="Lorem ipsum is simply dummy"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_10sdp" />
+
+            <TextView
+                fontPath="@string/poppins_font"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="test of the printing text of"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_10sdp" />
+
+            <TextView
+                fontPath="@string/poppins_font"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="the printing"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_10sdp" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

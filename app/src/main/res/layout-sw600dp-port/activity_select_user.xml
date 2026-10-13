@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activities.SelectUserActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/llSalesman"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cdDelivery"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="10dp">
+
+                <ImageView
+                    android:id="@+id/imgDelivery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/_20sdp"
+                    app:srcCompat="@drawable/ic_truck" />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/tvDelivery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:text="Salesman"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_16sdp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/llSupervisor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cdSuper"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="10dp">
+
+                <ImageView
+                    android:id="@+id/imgSuper"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/_20sdp"
+                    app:srcCompat="@drawable/ic_salesman" />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/tvSUper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:text="Supervisor"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_16sdp" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

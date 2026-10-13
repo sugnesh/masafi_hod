@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/_5sdp"
+            android:visibility="visible"
+            android:background="@color/white_200"
+            tools:context=".activities.NewDashboardActivity">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                app:cardBackgroundColor="@color/colorWhite"
+                app:cardCornerRadius="@dimen/_6sdp"
+                app:cardElevation="@dimen/_4sdp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cardView">
+
+                    <RelativeLayout
+                        android:id="@+id/dailyDetailView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_8sdp"
+                        android:gravity="center"
+                        android:visibility="visible">
+
+                        <LinearLayout
+                            android:id="@+id/topview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/_5sdp"
+                            android:gravity="end"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/_5sdp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:gravity="center"
+                                android:text="DTD"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/_16sdp"
+                                app:fontPath="@string/bold_font" />
+
+                            <Switch
+                                android:id="@+id/swcDtdMtd"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:gravity="center"
+                                android:text="MTD"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/_16sdp"
+                                app:fontPath="@string/bold_font" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_below="@id/topview"
+                            android:id="@+id/calenderView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_10sdp"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:visibility="visible">
+
+                                <TextView
+                                    android:layout_width="@dimen/_100sdp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="Today"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/_16sdp"
+                                    app:fontPath="@string/bold_font" />
+
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/txtCurrentDay"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="22  jan 2020"
+                                android:textColor="@color/colorGrey"
+                                android:textSize="14sp"
+                                app:fontPath="@string/bold_font" />
+                        </LinearLayout>
+
+                        <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                            android:id="@+id/circularProgressBar"
+                            android:layout_width="@dimen/_100sdp"
+                            android:layout_height="@dimen/_100sdp"
+                            android:layout_below="@id/calenderView"
+                            android:layout_centerHorizontal="true"
+                            app:cpb_background_progressbar_color="#b6bbd8"
+                            app:cpb_background_progressbar_width="5dp"
+                            app:cpb_progress_direction="to_right"
+                            app:cpb_progressbar_color="#3f51b5"
+                            app:cpb_progressbar_width="10dp"
+                            app:cpb_round_border="false" />
+
+                        <LinearLayout
+                            android:layout_width="@dimen/_70sdp"
+                            android:layout_height="@dimen/_70sdp"
+                            android:layout_below="@id/calenderView"
+                            android:layout_centerHorizontal="true"
+                            android:layout_margin="@dimen/_20sdp"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:gravity="center"
+                                android:text="My Progress"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/_11sdp"
+                                app:fontPath="@string/bold_font" />
+
+                            <TextView
+                                android:id="@+id/tvProgress"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_marginRight="10dp"
+                                android:gravity="center"
+                                android:text="20%"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="@dimen/_11sdp"
+                                app:fontPath="@string/bold_font" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardView">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_80sdp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        app:cardBackgroundColor="@color/colorWhite"
+                        app:cardCornerRadius="@dimen/_6sdp"
+                        app:cardElevation="@dimen/_4sdp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/_6sdp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Gross Sales"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/_10sdp"
+                                app:fontPath="@string/bold_font" />
+
+                            <TextView
+                                android:id="@+id/tvGrossAmt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:text="20 AED"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/_12sdp"
+                                app:fontPath="@string/bold_font" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        app:cardBackgroundColor="@color/colorWhite"
+                        app:cardCornerRadius="@dimen/_6sdp"
+                        app:cardElevation="@dimen/_4sdp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/_6sdp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Net Sales"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/_10sdp"
+                                app:fontPath="@string/bold_font" />
+
+                            <TextView
+                                android:id="@+id/tvNetAmt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:text="18 AED"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/_12sdp"
+                                app:fontPath="@string/bold_font" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_80sdp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        app:cardBackgroundColor="@color/colorWhite"
+                        app:cardCornerRadius="@dimen/_6sdp"
+                        app:cardElevation="@dimen/_4sdp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/_6sdp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Visited\nCustomer"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/_10sdp"
+                                app:fontPath="@string/bold_font" />
+
+                            <TextView
+                                android:id="@+id/tvCustomerCount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:text="10"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/_12sdp"
+                                app:fontPath="@string/bold_font" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        app:cardBackgroundColor="@color/colorWhite"
+                        app:cardCornerRadius="@dimen/_6sdp"
+                        app:cardElevation="@dimen/_4sdp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/_6sdp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Return"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/_10sdp"
+                                app:fontPath="@string/bold_font" />
+
+                            <TextView
+                                android:id="@+id/tvReturnAmt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:text="20 AED"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/_12sdp"
+                                app:fontPath="@string/bold_font" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/lytTrip"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#80000000"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".activities.DashboardActivity">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_begin_trip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Begin Trip"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+    </FrameLayout>
+</layout>

@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_margin="@dimen/_4sdp"
+                android:layout_weight="1"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="@dimen/_6sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text_valueOne"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Gross Sales"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_12sdp"
+                        app:fontPath="@string/regular_font" />
+
+                    <TextView
+                        android:id="@+id/text_salesvalue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="AED 0"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_16sdp"
+                        app:fontPath="@string/bold_font" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_margin="@dimen/_4sdp"
+                android:layout_weight="1"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="@dimen/_6sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Visited Customer"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_12sdp"
+                        app:fontPath="@string/regular_font" />
+
+                    <TextView
+                        android:id="@+id/text_visit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_16sdp"
+                        app:fontPath="@string/bold_font" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_margin="@dimen/_4sdp"
+                android:layout_weight="1"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="@dimen/_6sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Return"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_12sdp"
+                        app:fontPath="@string/regular_font" />
+
+                    <TextView
+                        android:id="@+id/text_returnvalue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="AED 0"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_16sdp"
+                        app:fontPath="@string/bold_font" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_margin="@dimen/_4sdp"
+                android:layout_weight="1"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="@dimen/_6sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Collection"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_12sdp"
+                        app:fontPath="@string/regular_font" />
+
+                    <TextView
+                        android:id="@+id/text_collection"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="AED 0"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_16sdp"
+                        app:fontPath="@string/bold_font"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:elevation="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/text_salesFigures"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sales Figures"
+                    android:textColor="@android:color/black"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/image_circleMarketingSales"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginRight="4dp"
+                        android:src="@drawable/circle_blue" />
+
+                    <TextView
+                        android:id="@+id/text_marketingSales"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="Marketing Sales"
+                        android:textSize="14dp" />
+
+
+                    <ImageView
+                        android:id="@+id/image_circleCasesSales"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginRight="4dp"
+                        android:src="@drawable/circle_green" />
+
+                    <TextView
+                        android:id="@+id/text_casesSales"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginStart="2dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="0dp"
+                        android:text="Cases Sales"
+                        android:textSize="14dp" />
+                </LinearLayout>
+
+                <lecho.lib.hellocharts.view.LineChartView
+                    android:id="@+id/lineChart_SalesFigures"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</layout>

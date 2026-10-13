@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/_20sdp"
+        tools:context=".activities.EditCustomerActivity">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="40dp"
+            android:text="Customer Id"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_14sdp" />
+
+        <EditText
+            android:id="@+id/et_customer_id"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:backgroundTint="@color/colorBlack"
+            android:inputType="text"
+            android:textCursorDrawable="@null"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:singleLine="true"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_14sdp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="24dp"
+            android:text="Customer Name"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_14sdp" />
+
+        <EditText
+            android:id="@+id/et_customer_name"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:backgroundTint="@color/colorBlack"
+            android:inputType="text"
+            android:maxLength="8"
+            android:textCursorDrawable="@null"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:singleLine="true"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_14sdp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:textAllCaps="true"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:padding="@dimen/_10sdp"
+            app:cornerRadius="@dimen/_6sdp"/>
+
+    </LinearLayout>
+</layout>

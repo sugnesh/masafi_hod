@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activity.InputDialogOrderActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:cardBackgroundColor="@android:color/white"
+            card_view:cardCornerRadius="6dp"
+            card_view:cardElevation="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:orientation="vertical"
+                android:padding="@dimen/_10sdp">
+
+                <TextView
+                    android:id="@+id/txt_invoice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:maxEms="12"
+                    android:text="Item Name"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textColor="@color/colorPrimary" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_18sdp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgStamp"
+                    android:layout_width="@dimen/_228sdp"
+                    android:layout_height="@dimen/_158sdp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/ic_dummy_stamp"
+                    android:scaleType="fitXY" />
+
+                <ImageView
+                    android:visibility="gone"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:id="@+id/imgStamp2"
+                    android:layout_width="@dimen/_228sdp"
+                    android:layout_height="@dimen/_158sdp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/ic_dummy_stamp"
+                    android:scaleType="fitXY" />
+
+                <ImageView
+                    android:visibility="gone"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:id="@+id/imgStamp3"
+                    android:layout_width="@dimen/_228sdp"
+                    android:layout_height="@dimen/_158sdp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/ic_dummy_stamp"
+                    android:scaleType="fitXY" />
+            </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_18sdp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnUpload"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/rounded_corner_green_bg"
+                        android:paddingLeft="@dimen/_18sdp"
+                        android:paddingRight="@dimen/_18sdp"
+                        android:text="Submit"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                        android:textColor="@color/colorWhite" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</layout>

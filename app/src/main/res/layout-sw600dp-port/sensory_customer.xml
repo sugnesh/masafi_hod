@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@color/transparent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:background="@drawable/btn_rectangle"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <EditText
+            android:id="@+id/edtCustomerName"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:background="@drawable/btn_rectangle"
+            android:hint="Customer Name"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:padding="@dimen/_5sdp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+        <EditText
+            android:id="@+id/edtCustomerEmail"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@drawable/btn_rectangle"
+            android:hint="Customer Email"
+            android:imeOptions="actionNext"
+            android:inputType="textEmailAddress"
+            android:padding="@dimen/_5sdp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+        <EditText
+            android:id="@+id/edtCustomerPhone"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@drawable/btn_rectangle"
+            android:hint="Customer Phone"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:padding="@dimen/_5sdp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+        <EditText
+            android:id="@+id/edtCustomerAddress"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@drawable/btn_rectangle"
+            android:hint="Customer Address"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:padding="@dimen/_5sdp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+        <TextView
+            android:id="@+id/btnSubmit"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:background="@drawable/btn_fill_rectangle"
+            android:gravity="center"
+            android:text="SUBMIT"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/colorWhite" />
+    </LinearLayout>
+
+</FrameLayout>

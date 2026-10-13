@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- TODO: VanSales  -->
+    <color name="colorPrimary">#21448B</color>
+    <color name="colorPrimaryDark">#21448B</color>
+    <color name="colorAccent">#21448B</color>
+
+    <!-- TODO: Invoices  -->
+   <!-- <color name="colorPrimary">#1066eb</color>
+    <color name="colorPrimaryDark">#1066eb</color>
+    <color name="colorAccent">#1066eb</color>-->
+
+    <!-- TODO: PreSales  -->
+    <!--<color name="colorPrimary">#9c51e1</color>
+    <color name="colorPrimaryDark">#9c51e1</color>
+    <color name="colorAccent">#9c51e1</color>-->
+
+    <!-- TODO: Merchandising  -->
+   <!-- <color name="colorPrimary">#16c6ff</color>
+    <color name="colorPrimaryDark">#16c6ff</color>
+    <color name="colorAccent">#16c6ff</color>-->
+    <color name="purple">#6750A4</color>
+    <color name="white">#FFFFFF</color>
+    <color name="pink">#E91E63</color>
+    <color name="prog_2">#8C9EFF</color>
+    <color name="colorRed">#FF0F0F</color>
+    <color name="color_yellow">#FFFF00</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#000</color>
+    <color name="grayd8">#808080</color>
+    <color name="colorGrey">#808080</color>
+    <color name="colorGrey_100">#f5f5f5</color>
+    <color name="colorGrey_200">#BEBEC0</color>
+    <color name="hint_gray">#77869E</color>
+    <color name="edittext_color">#042C5C</color>
+    <color name="tint_green">#21448B</color>
+    <color name="editBack">#5d4C4C4C</color>
+    <color name="editBack2">#8d4C4C4C</color>
+    <color name="colorMenuText">#464646</color>
+    <color name="colorOffWhite">#E2E2E2</color>
+    <color name="colorButtonBg">#21448B</color>
+    <color name="colorLightGreen">#b2fab4</color>
+    <color name="colorBlueGrey">#78909c</color>
+    <color name="selected">#F5F5F5</color>
+    <color name="transparent">#00000000</color>
+    <color name="colorWhite_100">#F5F5F5</color>
+    <color name="colorWhite_200">#EEEEEE</color>
+    <color name="darkBlack">#4A4A4A</color>
+    <color name="mintGreen">#607F6E</color>
+    <color name="color_10">#21448B</color>
+    <color name="theme_color">#21448B</color>
+    <color name="popup_divider">#f0f0f0</color>
+    <color name="white_200">#EEEEEE</color>
+    <color name="color_blue">#2727ff</color>
+
+</resources>

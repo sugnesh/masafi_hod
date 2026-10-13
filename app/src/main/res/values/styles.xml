@@ -1,0 +1,80 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:actionButtonStyle">@style/MyActionButtonStyle</item>
+        <item name="android:windowContentTransitions">true</item>
+    </style>
+    <style name="MyRadioButton" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@color/colorWhite</item>
+        <item name="colorControlActivated">@color/colorWhite</item>
+    </style>
+    <style name="MyActionButtonStyle" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:minWidth">22dip</item>
+        <item name="android:padding">7dip</item>
+    </style>
+
+    <style name="CalenderViewDateCustomText" parent="android:TextAppearance.DeviceDefault.Medium">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:weekNumberColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="CalenderViewWeekCustomText" parent="android:TextAppearance.DeviceDefault.Medium">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">@dimen/_12sdp</item>
+    </style>
+    <style name="roundedImageViewRounded">
+        <item name="cornerSize">50%</item>
+    </style>
+    <style name="styleMenuText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="fontPath">@string/regular_font</item>
+        <item name="android:textColor">@color/colorMenuText</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle</item>
+    </style>
+
+    <!-- Round shape theme. -->
+    <style name="RoundShapeTheme" parent="ThemeOverlay.MaterialComponents.Dialog.Alert">
+        <item name="shapeAppearanceMediumComponent">@style/RoundShapeAppearance</item>
+    </style>
+
+    <style name="RoundShapeAppearance" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">80%</item>
+    </style>
+
+    <style name="dialogTheme" parent="Theme.MaterialComponents.Light.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>
+
+    <declare-styleable name="RoundProgressBar">
+        <attr name="tlcp_strokeWidth" format="dimension" />
+        <attr name="tlcp_text" format="reference" />
+        <attr name="tlcp_textSize" format="dimension" />
+        <attr name="tlcp_drawable" format="reference" />
+        <attr name="tlcp_progress_color" format="reference" />
+        <attr name="tlcp_progress2_color" format="reference" />
+        <attr name="tlcp_bg_color" format="reference" />
+        <attr name="tlcp_progress" format="integer" />
+        <attr name="tlcp_progress2" format="integer" />
+    </declare-styleable>
+
+</resources>

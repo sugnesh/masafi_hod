@@ -1,0 +1,5 @@
+rootProject.name='SFA SAAS'
+include ':app'
+include ':materialVerticalStepper'
+include ':sdkOpenCv'
+include ':cropper'

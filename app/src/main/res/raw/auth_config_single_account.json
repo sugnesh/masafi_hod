@@ -1,0 +1,17 @@
+{
+  "client_id": "1572e175-c027-424f-89e2-5ab7fad6856f",
+  "authorization_user_agent": "DEFAULT",
+  "redirect_uri": "msauth://com.engear.vansales/%2Bk7KsUlZJfMOGtRbgjDGnFvtj44%3D",
+  "broker_redirect_uri_registered": true,
+  "shared_device_mode_supported": true,
+  "account_mode": "SINGLE",
+  "authorities": [
+    {
+      "type": "AAD",
+      "audience": {
+        "type": "AzureADMyOrg",
+        "tenant_id": "9b68a4ed-f15a-4f2a-b386-e20082dd28cf"
+      }
+    }
+  ]
+}

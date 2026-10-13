@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "947432774011",
+    "project_id": "engear-vansales",
+    "storage_bucket": "engear-vansales.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:947432774011:android:7c38a65873b337345985de",
+        "android_client_info": {
+          "package_name": "com.engear.vansales"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "947432774011-vv4pc9lmvlde5hbkj30mcvi78jfh5khe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDT9fDEi4O_bDHeLMst3-vDODVGAknhZ0o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "947432774011-vv4pc9lmvlde5hbkj30mcvi78jfh5khe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

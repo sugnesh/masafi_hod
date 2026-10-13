@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".merchandiser.AddPromotionalActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/lytStep"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical">
+
+            <com.shuhart.stepview.StepView
+                android:id="@+id/stepView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:padding="16dp"
+                app:sv_animationType="All"
+                app:sv_stepPadding="12dp"
+                app:sv_stepsNumber="3" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lytDetailView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/lytStep"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/_16sdp"
+            android:paddingTop="@dimen/_16sdp"
+            android:paddingRight="@dimen/_16sdp"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/edtCustomer_Nmae"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="@drawable/btn_rectangle"
+                android:hint="Enter Customer Name"
+                android:imeOptions="actionNext"
+                android:maxLines="1"
+                android:padding="@dimen/_5sdp"
+                android:singleLine="true"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                android:textColor="@color/colorBlack" />
+
+            <EditText
+                android:id="@+id/edtPhone"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/btn_rectangle"
+                android:hint="Enter Mobile No."
+                android:imeOptions="actionNext"
+                android:inputType="phone"
+                android:maxLines="1"
+                android:padding="@dimen/_5sdp"
+                android:singleLine="true"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                android:textColor="@color/colorBlack" />
+
+            <EditText
+                android:id="@+id/edtLocation"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/btn_rectangle"
+                android:hint="Enter Customer Location"
+                android:imeOptions="actionDone"
+                android:maxLines="1"
+                android:padding="@dimen/_5sdp"
+                android:singleLine="true"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                android:textColor="@color/colorBlack" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lytItemView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/lytStep"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:scrollbars="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lytInvoiceView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/lytStep"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/_16sdp"
+            android:paddingTop="@dimen/_16sdp"
+            android:paddingRight="@dimen/_16sdp"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/edtInvoiceNo"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="@drawable/btn_rectangle"
+                android:hint="Enter Invoice No."
+                android:imeOptions="actionDone"
+                android:maxLines="1"
+                android:padding="@dimen/_5sdp"
+                android:singleLine="true"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                android:textColor="@color/colorBlack" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/btn_rectangle"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/_150sdp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/layoutImage"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <ImageView
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:src="@drawable/photo" />
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="Capture Invoice Image"
+                            android:textColor="@color/colorPrimaryDark" />
+                    </LinearLayout>
+
+                    <FrameLayout
+                        android:id="@+id/layout_pager"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/ivImage"
+                            android:layout_width="fill_parent"
+                            android:layout_height="@dimen/_150sdp"
+                            android:scaleType="centerCrop" />
+
+                    </FrameLayout>
+                </FrameLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/_10sdp"
+            app:srcCompat="@drawable/ic_arrow_right" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/_10sdp"
+            android:visibility="gone"
+            app:srcCompat="@drawable/ic_arrow_left" />
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">ENGEAR  HOD</string>
+    <!--<string name="app_name">ENGEAR  INVOICE</string>-->
+    <!--<string name="app_name">ENGEAR MERCHANDISING</string>-->
+    <!--<string name="app_name">ENGEAR  PRESALES</string>-->
+
+    <string name="regular_font">fonts/segoe_ui_regular.ttf</string>
+    <string name="bold_font">fonts/segoe_ui_bold.ttf</string>
+    <string name="quickBold_font">fonts/quicksand_bold.otf</string>
+    <string name="quickLight_font">fonts/quicksand_regular.otf</string>
+    <string name="poppins_font">fonts/poppins_light.otf</string>
+   <!-- AIzaSyAUNjnHq6djPleKG3oxD9113o4S-Bx3ISs-->
+    <string name="google_maps_key">
+        AIzaSyB2lnspKWbqHxeMwxz4kctLS9yij5fnoJE
+        <!--AIzaSyD2w1Z6zlaS8X3Qos8PU297u1HWMRi5T7o-->
+    </string>
+
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="no_internet_connection">Please check your internet connection and try again.</string>
+    <string name="not_connected">You are not connected to a device</string>
+    <string name="connect_fail">Unable to connect device</string>
+    <string name="connect_lost">Device connection was lost</string>
+    <string name="title_paired_devices">Paired Devices</string>
+    <string name="title_other_devices">Other Available Devices</string>
+    <string name="button_scan">Scan for devices</string>
+    <string name="none_paired">No devices have been paired</string>
+    <string name="scanning">scanning for devices....</string>
+    <string name="select_device">select a device to connect</string>
+    <string name="none_found">No devices found</string>
+    <string name="saleSummary"><u>Sales Summary</u></string>
+    <string name="targetSummary"><u>Target Summary</u></string>
+    <string name="targetVSummary"><u>Target Volume Summary</u></string>
+    <string name="account_number_bank"><![CDATA[Account Number & Bank]]></string>
+</resources>

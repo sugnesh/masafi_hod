@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activities.DashboardActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite_100">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/tvBottom"
+            android:background="@color/colorWhite_100"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/lytCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lytDepot"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/_8sdp"
+                android:paddingBottom="@dimen/_8sdp"
+                android:visibility="gone">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:divider="@null"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvItemList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:clipToPadding="false"
+                android:paddingBottom="@dimen/_60sdp" />
+
+            <TextView
+                android:id="@+id/tvNoData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No Customer Found"
+                android:textSize="@dimen/_16sdp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="@dimen/_16sdp"
+            android:layout_marginBottom="@dimen/_36sdp"
+            app:srcCompat="@drawable/ic_submit"
+            app:tint="@color/colorWhite" />
+
+        <LinearLayout
+            android:id="@+id/tvBottom"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/_5sdp">
+
+                <TextView
+                    fontPath="@string/bold_font"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Qty:"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_11sdp" />
+
+                <TextView
+                    android:id="@+id/txtNet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:text="0"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_11sdp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="right|center_vertical"
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/_5sdp">
+
+                <TextView
+                    fontPath="@string/bold_font"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Net Amount:"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_11sdp" />
+
+                <TextView
+                    android:id="@+id/txtGross"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:text="0"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_11sdp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</layout>
+

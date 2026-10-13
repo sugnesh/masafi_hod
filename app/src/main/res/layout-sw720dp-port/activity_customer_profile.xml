@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".merchandiser.CustomerProfileActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:descendantFocusability="blocksDescendants"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="220dp"
+                android:layout_margin="@dimen/_10sdp"
+                android:background="@drawable/btn_rectangle"
+                android:orientation="horizontal">
+
+                <fragment
+                    android:id="@+id/map"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="120dp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="120dp"
+                    android:background="@drawable/btn_rectangle"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="2"
+                        android:gravity="center_horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="@dimen/_50sdp"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/user_circle" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="6"
+                        android:gravity="top"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/_10sdp">
+
+                        <TextView
+                            android:id="@+id/txtCustomerName"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:text="Customer Name"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/colorBlack"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent"
+                                    android:text="Site Code :"
+                                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                                    android:textColor="@color/colorGrey" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:id="@+id/txtCustomerCode"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent"
+                                    android:text=""
+                                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                                    android:textColor="@color/colorGrey" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent"
+                                    android:text="Customer Code :"
+                                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                                    android:textColor="@color/colorGrey" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:id="@+id/txtParentCode"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent"
+                                    android:text=""
+                                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                                    android:textColor="@color/colorGrey" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_120sdp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/_95sdp"
+                        android:layout_height="@dimen/_110sdp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/box_bg">
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <!-- Central cirle view -->
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                                <FrameLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                                        android:layout_width="60dp"
+                                        android:layout_height="60dp"
+                                        android:layout_gravity="center"
+                                        android:src="#4291dE"
+                                        app:civ_border_color="@color/prog_2"
+                                        app:civ_border_width="0dp" />
+
+                                </FrameLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="@dimen/_40sdp"
+                                        android:layout_height="@dimen/_40sdp"
+                                        android:layout_above="@+id/txt_center"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_centerVertical="true"
+                                        android:layout_gravity="center"
+                                        android:background="@drawable/order" />
+                                </LinearLayout>
+
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:gravity="center"
+                                android:text="Customer Type"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/_12sdp" />
+
+                            <TextView
+                                android:id="@+id/txtCustomerType"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="0"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/_10sdp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_120sdp"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/_95sdp"
+                        android:layout_height="@dimen/_110sdp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/box_bg">
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <!-- Central cirle view -->
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                                <FrameLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                                        android:layout_width="60dp"
+                                        android:layout_height="60dp"
+                                        android:layout_gravity="center"
+                                        android:src="#4291dE"
+                                        app:civ_border_color="@color/prog_2"
+                                        app:civ_border_width="0dp" />
+
+                                </FrameLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="@dimen/_40sdp"
+                                        android:layout_height="@dimen/_40sdp"
+                                        android:layout_above="@+id/txt_center"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_centerVertical="true"
+                                        android:layout_gravity="center"
+                                        android:background="@drawable/ecommerce" />
+                                </LinearLayout>
+
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:gravity="center"
+                                android:text="Shelf Display"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/_12sdp" />
+
+                            <TextView
+                                android:id="@+id/txtShelfDisplay"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="0"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/_10sdp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btnProductList"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_120sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/_95sdp"
+                        android:layout_height="@dimen/_110sdp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/box_bg">
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <!-- Central cirle view -->
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                                <FrameLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                                        android:layout_width="60dp"
+                                        android:layout_height="60dp"
+                                        android:layout_gravity="center"
+                                        android:src="#4291dE"
+                                        app:civ_border_color="@color/prog_2"
+                                        app:civ_border_width="0dp" />
+
+                                </FrameLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="@dimen/_40sdp"
+                                        android:layout_height="@dimen/_40sdp"
+                                        android:layout_above="@+id/txt_center"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_centerVertical="true"
+                                        android:layout_gravity="center"
+                                        android:background="@drawable/wrong_file" />
+                                </LinearLayout>
+
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:gravity="center"
+                                android:text="Product Listed"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/_12sdp" />
+
+                            <TextView
+                                android:id="@+id/txtProductList"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="0"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/_10sdp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

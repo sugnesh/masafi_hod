@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activities.CollectionActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:padding="@dimen/_8sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Payment Mode :"
+                android:textColor="@color/colorButtonBg"
+                android:textSize="@dimen/_14sdp" />
+
+            <RadioGroup
+                android:id="@+id/rgPaymentMode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbCash"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:text="Cash" />
+
+                <RadioButton
+                    android:id="@+id/rbCheque"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Cheque" />
+
+                <RadioButton
+                    android:id="@+id/rbCard"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Card"
+                    android:visibility="gone" />
+
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp">
+
+                <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_6sdp"
+                    android:layout_weight="1"
+                    card_view:cardBackgroundColor="@android:color/white"
+                    card_view:cardCornerRadius="6dp"
+                    card_view:cardElevation="1dp"
+                    card_view:cardUseCompatPadding="true">
+
+                    <EditText
+                        android:id="@+id/et_amount"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_26sdp"
+                        android:background="@android:color/transparent"
+                        android:gravity="center_vertical"
+                        android:hint="Amount"
+                        android:inputType="numberDecimal"
+                        android:paddingLeft="@dimen/_7sdp"
+                        android:paddingRight="@dimen/_7sdp"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/colorGrey" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/lytChequeNo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_6sdp"
+                    android:layout_weight="1"
+                    android:visibility="invisible"
+                    card_view:cardBackgroundColor="@android:color/white"
+                    card_view:cardCornerRadius="6dp"
+                    card_view:cardElevation="2dp"
+                    card_view:cardUseCompatPadding="true">
+
+                    <EditText
+                        android:id="@+id/et_cheque"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_26sdp"
+                        android:background="@android:color/transparent"
+                        android:gravity="center_vertical"
+                        android:hint="Cheque No. "
+                        android:paddingLeft="@dimen/_7sdp"
+                        android:paddingRight="@dimen/_7sdp"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/colorGrey" />
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llCheque"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/_6sdp"
+                        android:layout_weight="1"
+                        card_view:cardBackgroundColor="@android:color/white"
+                        card_view:cardCornerRadius="6dp"
+                        card_view:cardElevation="2dp"
+                        card_view:cardUseCompatPadding="true">
+
+                        <TextView
+                            android:id="@+id/et_bank"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_26sdp"
+                            android:background="@android:color/transparent"
+                            android:gravity="center_vertical"
+                            android:hint="Bank"
+                            android:paddingLeft="@dimen/_7sdp"
+                            android:paddingRight="@dimen/_7sdp"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                            android:textColor="@color/colorBlack"
+                            android:textColorHint="@color/colorGrey" />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_6sdp"
+                        android:layout_weight="1"
+                        card_view:cardBackgroundColor="@android:color/white"
+                        card_view:cardCornerRadius="6dp"
+                        card_view:cardElevation="2dp"
+                        card_view:cardUseCompatPadding="true">
+
+                        <EditText
+                            android:id="@+id/et_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_26sdp"
+                            android:background="@android:color/transparent"
+                            android:focusable="false"
+                            android:gravity="center_vertical"
+                            android:hint="Date"
+                            android:paddingLeft="@dimen/_7sdp"
+                            android:paddingRight="@dimen/_7sdp"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                            android:textColor="@color/colorBlack"
+                            android:textColorHint="@color/colorGrey" />
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:layout_height="fill_parent">
+
+                    <TextView
+                        android:id="@+id/txtAllocated"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Allocated Amt: 0"
+                        android:textSize="@dimen/_12sdp"
+                        android:textColor="@color/colorPrimary" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|right"
+                    android:layout_height="fill_parent">
+
+                    <TextView
+                        android:id="@+id/txtClearAmt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cleared Amt: 0"
+                        android:textSize="@dimen/_12sdp"
+                        android:textColor="@color/colorPrimary" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvCollectionList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp" />
+
+        </LinearLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_16sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:srcCompat="@drawable/ic_submit"
+            app:tint="@color/colorWhite" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_search"
+        android:title=""
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_scan"
+        android:icon="@drawable/ic_qr_code"
+        android:iconTint="@color/colorWhite"
+        android:title=""
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_survey"
+        android:icon="@drawable/ic_survey"
+        android:title=""
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_capture"
+        android:icon="@drawable/ic_baseline_image_24"
+        android:iconTint="@color/colorWhite"
+        android:title="Capture Image"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_sos"
+        android:icon="@drawable/ic_shelves"
+        android:iconTint="@color/colorWhite"
+        android:title="SOS"
+        app:showAsAction="ifRoom" />
+
+
+</menu>

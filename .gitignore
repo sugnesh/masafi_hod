@@ -1,0 +1,12 @@
+.gradle/
+**/.gradle/
+build/
+**/build/
+.cxx/
+**/.cxx/
+local.properties
+.idea/
+*.iml
+*.apk
+*.aab
+.DS_Store

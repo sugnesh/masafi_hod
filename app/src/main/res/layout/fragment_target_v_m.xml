@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragments.TargetFragment">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
+            android:background="@color/white_200"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:text="@string/targetSummary"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_14sdp"
+                    app:fontPath="@string/bold_font" />
+
+                <RelativeLayout
+                    android:id="@+id/dailyDetailView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:id="@+id/topview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:gravity="end"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_5sdp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:gravity="center"
+                            android:text="DTD"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/_12sdp"
+                            app:fontPath="@string/bold_font" />
+
+                        <Switch
+                            android:id="@+id/swcDtdMtd"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:checked="true" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:gravity="center"
+                            android:text="MTD"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/_12sdp"
+                            app:fontPath="@string/bold_font" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_160sdp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        app:cardBackgroundColor="@color/colorWhite"
+                        app:cardCornerRadius="@dimen/_6sdp"
+                        app:cardElevation="@dimen/_4sdp">
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/_2sdp"
+                                android:text="Tissue"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/_14sdp"
+                                app:fontPath="@string/bold_font" />
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                                    android:layout_width="@dimen/_100sdp"
+                                    android:layout_height="@dimen/_100sdp"
+                                    android:layout_below="@id/calenderView"
+                                    android:layout_gravity="center"
+                                    app:cpb_background_progressbar_color="#b6bbd8"
+                                    app:cpb_background_progressbar_width="5dp"
+                                    app:cpb_progress="80"
+                                    app:cpb_progress_direction="to_right"
+                                    app:cpb_progressbar_color="#3f51b5"
+                                    app:cpb_progressbar_width="10dp"
+                                    app:cpb_round_border="false" />
+
+                                <LinearLayout
+                                    android:id="@+id/lytTissue"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/txtTotal"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="Target\n1580"
+                                        android:textColor="#3f51b5"
+                                        android:textSize="@dimen/_11sdp" />
+
+                                    <TextView
+                                        android:id="@+id/txtTISSUETotal"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="Achived\n30"
+                                        android:textColor="#3f51b5"
+                                        android:textSize="@dimen/_11sdp" />
+
+                                </LinearLayout>
+
+                            </FrameLayout>
+                        </LinearLayout>
+
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        app:cardBackgroundColor="@color/colorWhite"
+                        app:cardCornerRadius="@dimen/_6sdp"
+                        app:cardElevation="@dimen/_4sdp">
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/_2sdp"
+                                android:text="PURE"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/_14sdp"
+                                app:fontPath="@string/bold_font" />
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                                    android:layout_width="@dimen/_100sdp"
+                                    android:layout_height="@dimen/_100sdp"
+                                    android:layout_below="@id/calenderView"
+                                    android:layout_gravity="center"
+                                    app:cpb_background_progressbar_color="#b6bbd8"
+                                    app:cpb_background_progressbar_width="5dp"
+                                    app:cpb_progress="30"
+                                    app:cpb_progress_direction="to_right"
+                                    app:cpb_progressbar_color="#fba276"
+                                    app:cpb_progressbar_width="10dp"
+                                    app:cpb_round_border="false" />
+
+                                <LinearLayout
+                                    android:id="@+id/lytPure"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/txtPureTotal"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="Target\n1580"
+                                        android:textColor="#3f51b5"
+                                        android:textSize="@dimen/_11sdp" />
+
+                                    <TextView
+                                        android:id="@+id/txtPureAcv"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="Achived\n30"
+                                        android:textColor="#3f51b5"
+                                        android:textSize="@dimen/_11sdp" />
+
+                                </LinearLayout>
+
+                            </FrameLayout>
+                        </LinearLayout>
+
+
+                    </com.google.android.material.card.MaterialCardView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_160sdp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        app:cardBackgroundColor="@color/colorWhite"
+                        app:cardCornerRadius="@dimen/_6sdp"
+                        app:cardElevation="@dimen/_4sdp">
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/_2sdp"
+                                android:text="ALKALIFE"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/_14sdp"
+                                app:fontPath="@string/bold_font" />
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                                    android:layout_width="@dimen/_100sdp"
+                                    android:layout_height="@dimen/_100sdp"
+                                    android:layout_below="@id/calenderView"
+                                    android:layout_gravity="center"
+                                    app:cpb_background_progressbar_color="#b6bbd8"
+                                    app:cpb_background_progressbar_width="5dp"
+                                    app:cpb_progress="30"
+                                    app:cpb_progress_direction="to_right"
+                                    app:cpb_progressbar_color="#85c0cb"
+                                    app:cpb_progressbar_width="10dp"
+                                    app:cpb_round_border="false" />
+
+                                <LinearLayout
+                                    android:id="@+id/lytAlkalife"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/txtAlkTotal"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="Target\n1580"
+                                        android:textColor="#3f51b5"
+                                        android:textSize="@dimen/_11sdp" />
+
+                                    <TextView
+                                        android:id="@+id/txtAlkAcv"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="Achived\n30"
+                                        android:textColor="#3f51b5"
+                                        android:textSize="@dimen/_11sdp" />
+
+                                </LinearLayout>
+
+                            </FrameLayout>
+                        </LinearLayout>
+
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        app:cardBackgroundColor="@color/colorWhite"
+                        app:cardCornerRadius="@dimen/_6sdp"
+                        app:cardElevation="@dimen/_4sdp">
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/_2sdp"
+                                android:text="ZERO"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/_14sdp"
+                                app:fontPath="@string/bold_font" />
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                                    android:layout_width="@dimen/_100sdp"
+                                    android:layout_height="@dimen/_100sdp"
+                                    android:layout_below="@id/calenderView"
+                                    android:layout_gravity="center"
+                                    app:cpb_background_progressbar_color="#b6bbd8"
+                                    app:cpb_background_progressbar_width="5dp"
+                                    app:cpb_progress="30"
+                                    app:cpb_progress_direction="to_right"
+                                    app:cpb_progressbar_color="#84bff3"
+                                    app:cpb_progressbar_width="10dp"
+                                    app:cpb_round_border="false" />
+
+                                <LinearLayout
+                                    android:id="@+id/lytZero"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/txtZeroTotal"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="Target\n1580"
+                                        android:textColor="#3f51b5"
+                                        android:textSize="@dimen/_11sdp" />
+
+                                    <TextView
+                                        android:id="@+id/txtZeroAcv"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="Achived\n30"
+                                        android:textColor="#3f51b5"
+                                        android:textSize="@dimen/_11sdp" />
+
+                                </LinearLayout>
+
+                            </FrameLayout>
+                        </LinearLayout>
+
+
+                    </com.google.android.material.card.MaterialCardView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_160sdp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        app:cardBackgroundColor="@color/colorWhite"
+                        app:cardCornerRadius="@dimen/_6sdp"
+                        app:cardElevation="@dimen/_4sdp">
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/_2sdp"
+                                android:text="4G"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/_14sdp"
+                                app:fontPath="@string/bold_font" />
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                                    android:layout_width="@dimen/_100sdp"
+                                    android:layout_height="@dimen/_100sdp"
+                                    android:layout_below="@id/calenderView"
+                                    android:layout_gravity="center"
+                                    app:cpb_background_progressbar_color="#b6bbd8"
+                                    app:cpb_background_progressbar_width="5dp"
+                                    app:cpb_progress="30"
+                                    app:cpb_progress_direction="to_right"
+                                    app:cpb_progressbar_color="#d2bff0"
+                                    app:cpb_progressbar_width="10dp"
+                                    app:cpb_round_border="false" />
+
+                                <LinearLayout
+                                    android:id="@+id/lyt4G"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/txt4GTotal"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="Target\n1580"
+                                        android:textColor="#3f51b5"
+                                        android:textSize="@dimen/_11sdp" />
+
+                                    <TextView
+                                        android:id="@+id/txt4GAcv"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="Achived\n30"
+                                        android:textColor="#3f51b5"
+                                        android:textSize="@dimen/_11sdp" />
+
+                                </LinearLayout>
+
+                            </FrameLayout>
+                        </LinearLayout>
+
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        app:cardBackgroundColor="@color/colorWhite"
+                        app:cardCornerRadius="@dimen/_6sdp"
+                        app:cardElevation="@dimen/_4sdp">
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/_2sdp"
+                                android:gravity="center"
+                                android:text="BABY WET\nWIPES"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/_14sdp"
+                                app:fontPath="@string/bold_font" />
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                                    android:layout_width="@dimen/_100sdp"
+                                    android:layout_height="@dimen/_100sdp"
+                                    android:layout_below="@id/calenderView"
+                                    android:layout_gravity="center"
+                                    app:cpb_background_progressbar_color="#b6bbd8"
+                                    app:cpb_background_progressbar_width="5dp"
+                                    app:cpb_progress="30"
+                                    app:cpb_progress_direction="to_right"
+                                    app:cpb_progressbar_color="#9cb2e3"
+                                    app:cpb_progressbar_width="10dp"
+                                    app:cpb_round_border="false" />
+
+                                <LinearLayout
+                                    android:id="@+id/lytBMWP"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/txtBWPTotal"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="Target\n1580"
+                                        android:textColor="#3f51b5"
+                                        android:textSize="@dimen/_11sdp" />
+
+                                    <TextView
+                                        android:id="@+id/txtBWPAcv"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="Achived\n30"
+                                        android:textColor="#3f51b5"
+                                        android:textSize="@dimen/_11sdp" />
+
+                                </LinearLayout>
+
+                            </FrameLayout>
+                        </LinearLayout>
+
+
+                    </com.google.android.material.card.MaterialCardView>
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</layout>

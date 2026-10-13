@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:id="@+id/llPre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cdPre"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="50dp">
+
+                    <ImageView
+                        android:id="@+id/imgPre"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:padding="@dimen/_20sdp"
+                        app:srcCompat="@drawable/ic_salesman" />
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/tvPre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pre Seller"
+                    android:textColor="@color/colorBlack" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llVan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cdVan"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="50dp">
+
+                    <ImageView
+                        android:id="@+id/imgVan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_20sdp"
+                        app:srcCompat="@drawable/ic_warehouse"
+                        android:layout_gravity="center" />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/tvVan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Van Sales"
+                    android:textColor="@color/colorBlack" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:id="@+id/llDelivery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cdDelivery"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="50dp">
+
+                    <ImageView
+                        android:id="@+id/imgDelivery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_20sdp"
+                        app:srcCompat="@drawable/ic_truck"
+                        android:layout_gravity="center" />
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/tvDelivery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Delivery"
+                    android:textColor="@color/colorBlack" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llHybrid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cdHybrid"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="50dp">
+
+                    <ImageView
+                        android:id="@+id/imgHybrid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_20sdp"
+                        app:srcCompat="@drawable/ic_hyb"
+                        android:layout_gravity="center" />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/tvHybrid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hybrid"
+                    android:textColor="@color/colorBlack" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:id="@+id/llMer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cdMer"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="50dp">
+
+                    <ImageView
+                        android:id="@+id/imgMer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_20sdp"
+                        app:srcCompat="@drawable/ic_merchan"
+                        android:layout_gravity="center" />
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/tvMer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Merchandiser"
+                    android:textColor="@color/colorBlack" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llFinance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cdFinance"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="50dp">
+
+                    <ImageView
+                        android:id="@+id/imgFinance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_20sdp"
+                        app:srcCompat="@drawable/ic_finance"
+                        android:layout_gravity="center" />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/tvFinance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Finance"
+                    android:textColor="@color/colorBlack" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnNext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="Next"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:padding="@dimen/_10sdp"
+            app:cornerRadius="@dimen/_6sdp"/>
+
+    </LinearLayout>
+</layout>

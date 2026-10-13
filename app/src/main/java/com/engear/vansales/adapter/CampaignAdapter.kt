@@ -1,0 +1,95 @@
+package com.engear.vansales.adapter
+
+import android.content.Context
+import android.view.LayoutInflater
+import android.view.ViewGroup
+import android.widget.Filter
+import android.widget.Filterable
+import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
+import com.engear.vansales.databinding.RowCompaignBinding
+import com.engear.vansales.interfaces.OnItemClickListener
+import com.engear.vansales.model.Campaign
+
+
+class CampaignAdapter(
+    var context: Context,
+    var allList: ArrayList<Campaign>
+) : RecyclerView.Adapter<CampaignAdapter.ViewHolder>(), Filterable {
+
+    private var contactListFiltered: ArrayList<Campaign> = allList
+
+    val onItemClickListener = context as OnItemClickListener
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        val binding = RowCompaignBinding.inflate(LayoutInflater.from(context), parent, false)
+        return ViewHolder(binding)
+    }
+
+    override fun getItemCount(): Int {
+        return contactListFiltered.size
+    }
+
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+
+        val mData = contactListFiltered[position]
+        holder.binding.item = mData
+
+        if (mData!!.images!!.isNotEmpty()) {
+            var splitImage = mData!!.images!!.split(",")
+            Glide.with(context)
+                .load(splitImage[0])
+                .into(
+                    holder.binding
+                        .profileImage
+                )
+        }
+        holder.binding.executePendingBindings()
+
+        holder.itemView.setOnClickListener {
+            onItemClickListener.onItemsClick(position, "dialog")
+        }
+
+    }
+
+
+    inner class ViewHolder(val binding: RowCompaignBinding) :
+        RecyclerView.ViewHolder(binding.root) {
+    }
+
+    override fun getFilter(): Filter {
+        return object : Filter() {
+            override fun performFiltering(charSequence: CharSequence): FilterResults {
+                val charString = charSequence.toString()
+                if (charString.isEmpty()) {
+                    contactListFiltered = allList
+                } else {
+                    val filteredList: ArrayList<Campaign> =
+                        ArrayList<Campaign>()
+                    for (row in allList) {
+
+                        // name match condition. this might differ depending on your requirement
+                        // here we are looking for name or phone number match
+                        if (row.compaignId!!.toLowerCase()
+                                .contains(charString.toLowerCase())
+                        ) {
+                            filteredList.add(row)
+                        }
+                    }
+                    contactListFiltered = filteredList
+                }
+                val filterResults = FilterResults()
+                filterResults.values = contactListFiltered
+                return filterResults
+            }
+
+            override fun publishResults(
+                charSequence: CharSequence,
+                filterResults: FilterResults
+            ) {
+                contactListFiltered = filterResults.values as ArrayList<Campaign>
+                notifyDataSetChanged()
+            }
+        }
+    }
+}
