@@ -2895,11 +2895,19 @@ class OrderConfirmActivity : BaseActivity(), OnItemClickListener {
             )
             mainArr.put("CUSTOMERID", customerData!!.customer_code)
             mainArr.put("CUSTOMER LAST", customerData!!.userDetail.lastname)
-            if (customerData!!.customer_address_1 != null) {
-                mainArr.put("ADDRESS", "" + customerData!!.customer_address_1)
+
+            var mAddress = db!!.getDeliveryOrderAddress(deliveryNo!!)
+
+            if (mAddress.isNotEmpty()) {
+                mainArr.put("ADDRESS", "" + mAddress)
             } else {
-                mainArr.put("ADDRESS", "")
+                if (customerData!!.customer_address_1 != null) {
+                    mainArr.put("ADDRESS", "" + customerData!!.customer_address_1)
+                } else {
+                    mainArr.put("ADDRESS", "")
+                }
             }
+
             if (customerData!!.customer_address_2 != null) {
                 mainArr.put("ADDRESS2", "" + customerData!!.customer_address_2)
             } else {

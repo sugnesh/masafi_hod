@@ -1274,6 +1274,7 @@ class PaymentDetailActivity : BaseActivity(), OnItemClickListener {
                 transaction = Transaction()
                 transaction.tr_type = AppConstants.TRANSACTION_TYPES.TT_PAYMENT_BY_CARD
                 cardRefrenceId = mData["AuthCode"]!!
+                transactionid = mData["transactionId"]!!
             }
 
             var cashType = "0"
@@ -1307,7 +1308,8 @@ class PaymentDetailActivity : BaseActivity(), OnItemClickListener {
                     "1",
                     grandTotal,
                     customerData!!.userDetail.id.toString(),
-                    cardRefrenceId
+                    cardRefrenceId,
+                    transactionid
                 )
 
             } else {
@@ -1321,7 +1323,8 @@ class PaymentDetailActivity : BaseActivity(), OnItemClickListener {
                     "0",
                     grandTotal,
                     customerData!!.userDetail.id.toString(),
-                    cardRefrenceId
+                    cardRefrenceId,
+                    transactionid
                 )
             }
 

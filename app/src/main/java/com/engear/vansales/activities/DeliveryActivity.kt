@@ -102,19 +102,11 @@ class DeliveryActivity : BaseActivity(), OnItemClickListener {
     //Invoice cancel
     private var image_uri: Uri? = null
     val arrCancelReason = arrayOf(
-        "Customer Requested Cancellation",
-        "Customer want to Change Quantity",
+        "Customer Change their Mind",
         "Recurring Order - Not Needed",
-        "Duplicate Order / Account",
-        "Delivered Earlier - No Longer Needed",
-        "Cash Payment Only",
         "Wrong Order",
-        "Replacement",
-        "Window Time Missed",
-        "Dark Store - No Space",
-        "IT Issue",
-        "Price Issue",
-        "Other"
+        "Window Time Missed / Dark Store Space",
+        "IT Issue (Duplicate Order / Account / Price Issue)"
     )
 
     val arrRESReason = arrayOf(
@@ -122,11 +114,8 @@ class DeliveryActivity : BaseActivity(), OnItemClickListener {
         "Customer not at Home - No iCash/Card Payment",
         "Item Not Loaded or OOS",
         "Wrong Route",
-        "Security Not Allowed",
-        "No Parking Available",
-        "Lift Not Working",
-        "Vehicle Breakdown",
-        "Other "
+        "Customer premises not accessible",
+        "Vehicle Breakdown"
     )
 
     companion object {

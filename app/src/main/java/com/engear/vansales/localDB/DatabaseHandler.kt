@@ -10545,6 +10545,7 @@ class DatabaseHandler(context: Context) :
         totalAmount: String,
         customerCode: String,
         cardRefre: String,
+        mTransactionId: String,
     ) {
 
         val db = this.writableDatabase
@@ -10558,6 +10559,7 @@ class DatabaseHandler(context: Context) :
             contentValueHD.put(KEY_ORDER_ID, coll_No)
             contentValueHD.put(KEY_COMMENT, "")
             contentValueHD.put(KEY_IMAGE_2, "")
+            contentValueHD.put(KEY_TR_ID, mTransactionId)
             contentValueHD.put(KEY_PAYMENT_REFRENCE, cardRefre)
             contentValueHD.put(KEY_BANK_CHARGE, "")
             contentValueHD.put(KEY_IS_PARTIAL, "1")
@@ -15288,6 +15290,28 @@ class DatabaseHandler(context: Context) :
         return name
     }
 
+    fun getDelvieryAddress(mItemId: String): String {
+        var name: String = ""
+
+        val db = this.readableDatabase
+        try {
+            var cursor = db.rawQuery(
+                ("SELECT * FROM " +
+                        TABLE_DELIVERY_HEADER + " WHERE " +
+                        KEY_DELIVERY_ID + "=?"), arrayOf<String>(mItemId)
+            )
+            cursor.moveToFirst()
+            val count = cursor.getCount()
+            if (count > 0)
+                name = cursor.getString(cursor.getColumnIndex(KEY_ADDRESS_1))
+            cursor.close()
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+
+        return name
+    }
+
     fun getDelvieryCharges(mItemId: String): String {
         var name: String = "0.0"
 
@@ -19642,6 +19666,39 @@ class DatabaseHandler(context: Context) :
             ("SELECT * FROM " +
                     TABLE_DELIVERY_HEADER + " WHERE " +
                     KEY_CUSTOMER_ID + "=?"),
+            arrayOf<String>(delivryNo)
+        )
+
+        try {
+            if (cursor.moveToFirst()) {
+
+                if (cursor.getString(cursor.getColumnIndex(KEY_ADDRESS_1)) != null) {
+                    pendingAmnt =
+                        cursor.getString(cursor.getColumnIndex(KEY_ADDRESS_1)) + " " + cursor.getString(
+                            cursor.getColumnIndex(KEY_ADDRESS_2)
+                        )
+                }
+
+            }
+        } finally {
+            try {
+                db.close()
+            } catch (ignore: Exception) {
+            }
+        }
+
+        return pendingAmnt
+    }
+
+    fun getDeliveryOrderAddress(delivryNo: String): String {
+        var pendingAmnt = ""
+
+        val db = this.readableDatabase
+
+        var cursor = db.rawQuery(
+            ("SELECT * FROM " +
+                    TABLE_DELIVERY_HEADER + " WHERE " +
+                    KEY_DELIVERY_NO + "=?"),
             arrayOf<String>(delivryNo)
         )
 

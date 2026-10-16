@@ -16,8 +16,8 @@ android {
         //applicationId "com.engear.vansales"
         minSdkVersion 31
         targetSdkVersion 29
-        versionCode 344
-        versionName "2.43"
+        versionCode 346
+        versionName "2.45"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
